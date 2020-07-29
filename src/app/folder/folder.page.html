@@ -8,15 +8,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-  fffff
+  <form>
+    <ion-item>
+      <ion-label>username</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>password</ion-label>
+      <ion-textarea type="text" ></ion-textarea>
+    </ion-item>
+    <ion-button type="submit">Submit</ion-button>
+  </form>
 </ion-content>
