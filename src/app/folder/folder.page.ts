@@ -20,7 +20,7 @@ export class FolderPage implements OnInit {
     const now = new Date();
    this.today = now.toISOString();
 
-   this.profileForm = this.formBuilder.group({
+  this.profileForm = this.formBuilder.group({
     name: ['',],
     email: [''],
     visit: [''],
@@ -28,18 +28,15 @@ export class FolderPage implements OnInit {
     date: [''],
     entry: [''],
     exit: ['']
-});
+    });
 
   }
-  
-  
   get f() { return this.profileForm.controls; }
   myDate: String = new Date().toLocaleDateString();
   
   submit(){
     let navigationExtras: NavigationExtras = {
       queryParams: {
-       
         name: this.profileForm.controls['name'].value,
         email: this.profileForm.controls['email'].value,
         visit: this.profileForm.controls['visit'].value,
