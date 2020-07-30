@@ -31,9 +31,13 @@
       <ion-label position="floating">Person to visit</ion-label>
       <ion-textarea type="Email"formControlName="pVisit"></ion-textarea>
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label>Date</ion-label>
       <ion-datetime  displayFormat="MM/DD/YYYY" placeholder="Select Date" formControlName="date"></ion-datetime>
+    </ion-item> -->
+    <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-input formControlName="date" [(ngModel)]="myDate"></ion-input>
     </ion-item>
    
     <ion-item>
@@ -44,17 +48,11 @@
       <ion-label position="floating">Time of exit</ion-label>
       <ion-input type="text" formControlName="exit" ></ion-input>
     </ion-item>
-    <!-- <ion-item>
-      <ion-label>Date</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="today"></ion-datetime>
-    </ion-item> -->
+   
     <ion-button shape="block"  (click)="submit()">Submit</ion-button>
 
   </form>
-  <ion-item>
-    <ion-label>Date</ion-label>
-    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="today"></ion-datetime>
-  </ion-item>
+  
   <!-- {{today | date:'medium'}} -->
   
 </ion-content>
